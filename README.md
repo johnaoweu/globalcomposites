@@ -4,13 +4,24 @@ A responsive, single-page redesign concept for Global Composite. The direction p
 
 ## Preview
 
-Run any static server from the project root:
+Node.js 18 or newer is the only requirement. Start the included local server from
+the project root—there are no packages to install:
 
 ```bash
-python3 -m http.server 4173
+npm start
 ```
 
 Then open `http://localhost:4173`.
+
+To use a different interface or port:
+
+```bash
+HOST=0.0.0.0 PORT=8080 npm start
+```
+
+The server supports `GET` and `HEAD` requests, serves the appropriate content
+type for each website asset, disables caching during design iteration, and returns
+clear `400`, `403`, `404`, and `405` responses for invalid requests.
 
 ## Design walkthrough
 
